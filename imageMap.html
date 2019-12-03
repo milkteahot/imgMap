@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <title>Using Javascript Image Map</title>
+    </head>
+    <body>
+        
+
+        <img src="inka_map.jpg" usemap="#Map" border="0" style="width:100%">
+        <style type="text/css">
+            img[usemap]{
+                border:none;
+                height: auto;
+                max-width: 100%;
+                width: auto;
+            }
+        </style>
+        <script>
+                var userName = prompt("당신의 이름은 무엇인가요?", '탐험가');
+                document.write("<h1> 당신의 이름은: " + userName + " 이군요!</h1>")
+        </script>
+        
+        <form name="myform">
+                지명: <input type="text" name="stage" size="30" />
+        </form>
+        <map name="Map" id="Map">
+            <!-- <area shape="circle" coords="201,485,82" href="#" alt="" target="_self" onMouseOver="showTutorial('casa')" /> -->
+            <area shape="rect" 
+                coords="119,403,283,567" 
+                href="#" alt="casa" 
+                onMouseOver="showTutorial('casa')" 
+                onMouseout="showTutorial('')"
+                onclick="window.open('casa.html', 'window_name','toolbar=no, top=200,left=200, width=500, height=500, loaction=no, status=no, scrollbars=yes');"
+                
+                />
+
+            <area shape="circle" 
+                coords="494,711,61" 
+                href="#" alt="" 
+                target="_self" 
+                onMouseOver="showTutorial('lazurita')" 
+                onMouseout="showTutorial('')"
+                onclick="window.open('lazurita.html', 'window_name','toolbar=no, top=200,left=200, width=500, height=500, loaction=no, status=no, scrollbars=yes');"
+                
+                />
+
+            <area shape="rect" 
+                coords="242,742,354,1085" 
+                href="#" alt="" 
+                target="_self" 
+                onMouseOver="showTutorial('aragonito')" 
+                onMouseout="showTutorial('')"
+                onclick="window.open('casa.html', 'window_name','toolbar=no, top=200,left=200, width=500, height=500, loaction=no, status=no, scrollbars=yes');"
+                
+                />
+
+            <area shape="circle" 
+                coords="1068,193,71" 
+                href="#" alt="" 
+                target="_self" 
+                onMouseOver="showTutorial('resto')" 
+                onMouseout="showTutorial('')"/>
+
+            <area shape="rect" 
+                coords="1061,281,1175,491" 
+                href="#" alt="" 
+                target="_self" 
+                onMouseOver="showTutorial('jade')" 
+                onMouseout="showTutorial('')"/>
+
+            <area shape="circle" 
+                coords="1025,709,122" 
+                href="#" alt="" 
+                target="_self" 
+                onMouseOver="showTutorial('granate')" 
+                onMouseout="showTutorial('')"/>
+
+            <area shape="circle" 
+                coords="1632,653,102" 
+                href="#" alt="" 
+                target="_self" 
+                onMouseOver="showTutorial('plata')" 
+                onMouseout="showTutorial('')"/>
+
+        </map>
+        </img>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="http://mattstow.com/experiment/responsive-image-maps/jquery.rwdImageMaps.min.js"></script>
+        <script>
+            $(function(){
+                $('img[usemap').rwdImageMaps();
+                $("img").width("100%");
+            })
+        </script>
+        <script type="text/javascript">
+            function showTutorial(name) {
+                document.myform.stage.value = name
+            }
+        </script>
+        
+
+    </body>
+</html>
+
