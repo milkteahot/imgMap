@@ -1,0 +1,6 @@
+{
+    "name":"imgmap",
+    "scripts": {
+        "start" : "index.html"
+    }
+}
